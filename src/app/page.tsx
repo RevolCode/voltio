@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { Mail, Lock, Eye, EyeOff, LogIn, Loader2 } from 'lucide-react'
+import Link from 'next/link'
 import { NeuButton } from '@/components/NeuButton'
 import { NeuInput } from '@/components/NeuInput'
 import { NeuCheckbox } from '@/components/NeuCheckbox'
@@ -105,7 +106,7 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Botón de Inicio de Sesión Principal (#6D3BFF) */}
+          {/* Botón de Inicio de Sesión Principal */}
           <NeuButton
             type="submit"
             variant="primary"
@@ -176,12 +177,12 @@ export default function Home() {
           </NeuButton>
         </div>
 
-        {/* Footer */}
+        {/* Footer con el Link corregido */}
         <div className="text-center text-xs text-gray-500 pt-2 border-t border-gray-300/40">
           ¿No tienes una cuenta?{' '}
-          <a href="#" className="text-[#FF3D9A] font-bold hover:underline">
+          <Link href="/register" className="text-[#FF3D9A] font-bold hover:underline">
             Regístrate aquí
-          </a>
+          </Link>
         </div>
       </div>
     </main>
